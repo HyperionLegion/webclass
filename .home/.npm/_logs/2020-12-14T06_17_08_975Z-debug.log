@@ -1,0 +1,73 @@
+0 verbose cli [
+0 verbose cli   '/usr/local/bin/node',
+0 verbose cli   '/usr/local/bin/npm',
+0 verbose cli   'install',
+0 verbose cli   '--save',
+0 verbose cli   'express'
+0 verbose cli ]
+1 info using npm@7.0.14
+2 info using node@v15.3.0
+3 timing config:load:defaults Completed in 2ms
+4 timing config:load:file:/usr/local/lib/node_modules/npm/npmrc Completed in 1ms
+5 timing config:load:builtin Completed in 1ms
+6 timing config:load:cli Completed in 2ms
+7 timing config:load:env Completed in 1ms
+8 timing config:load:file:/site/.npmrc Completed in 0ms
+9 timing config:load:project Completed in 1ms
+10 timing config:load:file:/root/.npmrc Completed in 0ms
+11 timing config:load:user Completed in 0ms
+12 timing config:load:file:/usr/local/etc/npmrc Completed in 0ms
+13 timing config:load:global Completed in 0ms
+14 timing config:load:cafile Completed in 1ms
+15 timing config:load:validate Completed in 0ms
+16 timing config:load:setUserAgent Completed in 0ms
+17 timing config:load:setEnvs Completed in 1ms
+18 timing config:load Completed in 9ms
+19 verbose npm-session a6a2d5bd754bf26f
+20 timing npm:load Completed in 53ms
+21 timing arborist:ctor Completed in 2ms
+22 timing idealTree:init Completed in 133ms
+23 timing idealTree:userRequests Completed in 2ms
+24 silly idealTree buildDeps
+25 silly fetch manifest 0@express
+26 http fetch GET 304 https://registry.npmjs.org/0 332ms (from cache)
+27 silly fetch manifest 1@hbs
+28 http fetch GET 304 https://registry.npmjs.org/1 38ms (from cache)
+29 silly fetch manifest 2@https
+30 http fetch GET 304 https://registry.npmjs.org/2 340ms (from cache)
+31 silly fetch manifest 3@path
+32 http fetch GET 304 https://registry.npmjs.org/3 85ms (from cache)
+33 silly fetch manifest express@*
+34 http fetch GET 304 https://registry.npmjs.org/express 80ms (from cache)
+35 silly placeDep ROOT 0@ OK for:  want: express
+36 silly placeDep ROOT 1@ OK for:  want: hbs
+37 silly placeDep ROOT 2@ OK for:  want: https
+38 silly placeDep ROOT 3@ OK for:  want: path
+39 timing idealTree:#root Completed in 900ms
+40 timing idealTree:node_modules/0 Completed in 0ms
+41 timing idealTree:node_modules/1 Completed in 0ms
+42 timing idealTree:node_modules/2 Completed in 0ms
+43 timing idealTree:node_modules/3 Completed in 0ms
+44 timing idealTree:buildDeps Completed in 902ms
+45 timing idealTree:fixDepFlags Completed in 3ms
+46 timing idealTree Completed in 1041ms
+47 timing command:install Completed in 1045ms
+48 verbose type tag
+49 verbose stack 0: No matching version found for 0@express.
+49 verbose stack     at module.exports (/usr/local/lib/node_modules/npm/node_modules/npm-pick-manifest/index.js:207:23)
+49 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/pacote/lib/registry.js:96:26
+49 verbose stack     at async Arborist.[buildDepStep] (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:781:11)
+49 verbose stack     at async Arborist.buildIdealTree (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:209:7)
+49 verbose stack     at async Promise.all (index 1)
+49 verbose stack     at async Arborist.reify (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:122:5)
+49 verbose stack     at async install (/usr/local/lib/node_modules/npm/lib/install.js:39:3)
+50 verbose cwd /site
+51 verbose Linux 5.4.0-48-generic
+52 verbose argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "--save" "express"
+53 verbose node v15.3.0
+54 verbose npm  v7.0.14
+55 error code ETARGET
+56 error notarget No matching version found for 0@express.
+57 error notarget In most cases you or one of your dependencies are requesting
+57 error notarget a package version that doesn't exist.
+58 verbose exit 1

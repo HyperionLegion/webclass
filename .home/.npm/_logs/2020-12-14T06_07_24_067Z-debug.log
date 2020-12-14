@@ -1,0 +1,119 @@
+0 verbose cli [
+0 verbose cli   '/usr/local/bin/node',
+0 verbose cli   '/usr/local/bin/npm',
+0 verbose cli   'install',
+0 verbose cli   '--save',
+0 verbose cli   'simple-oauth2'
+0 verbose cli ]
+1 info using npm@7.0.14
+2 info using node@v15.3.0
+3 timing config:load:defaults Completed in 3ms
+4 timing config:load:file:/usr/local/lib/node_modules/npm/npmrc Completed in 1ms
+5 timing config:load:builtin Completed in 1ms
+6 timing config:load:cli Completed in 2ms
+7 timing config:load:env Completed in 1ms
+8 timing config:load:file:/site/.npmrc Completed in 0ms
+9 timing config:load:project Completed in 0ms
+10 timing config:load:file:/root/.npmrc Completed in 2ms
+11 timing config:load:user Completed in 2ms
+12 timing config:load:file:/usr/local/etc/npmrc Completed in 0ms
+13 timing config:load:global Completed in 0ms
+14 timing config:load:cafile Completed in 0ms
+15 timing config:load:validate Completed in 1ms
+16 timing config:load:setUserAgent Completed in 0ms
+17 timing config:load:setEnvs Completed in 1ms
+18 timing config:load Completed in 11ms
+19 verbose npm-session 6c6b6ddb3e98eeb2
+20 timing npm:load Completed in 47ms
+21 timing arborist:ctor Completed in 1ms
+22 timing idealTree:init Completed in 140ms
+23 timing idealTree:userRequests Completed in 3ms
+24 silly idealTree buildDeps
+25 silly fetch manifest 0@express
+26 http fetch GET 304 https://registry.npmjs.org/0 395ms (from cache)
+27 silly fetch manifest 1@hbs
+28 http fetch GET 304 https://registry.npmjs.org/1 85ms (from cache)
+29 silly fetch manifest 2@https
+30 http fetch GET 304 https://registry.npmjs.org/2 83ms (from cache)
+31 silly fetch manifest 3@path
+32 http fetch GET 304 https://registry.npmjs.org/3 74ms (from cache)
+33 silly fetch manifest simple-oauth2@*
+34 http fetch GET 304 https://registry.npmjs.org/simple-oauth2 68ms (from cache)
+35 silly placeDep ROOT 0@ OK for:  want: express
+36 silly placeDep ROOT 1@ OK for:  want: hbs
+37 silly placeDep ROOT 2@ OK for:  want: https
+38 silly placeDep ROOT 3@ OK for:  want: path
+39 silly placeDep ROOT simple-oauth2@4.2.0 OK for:  want: *
+40 silly fetch manifest @hapi/hoek@^9.0.4
+41 silly fetch manifest @hapi/wreck@^17.0.0
+42 silly fetch manifest debug@^4.1.1
+43 silly fetch manifest joi@^17.3.0
+44 http fetch GET 200 https://registry.npmjs.org/@hapi%2fhoek 21ms (from cache)
+45 http fetch GET 304 https://registry.npmjs.org/debug 113ms (from cache)
+46 http fetch GET 304 https://registry.npmjs.org/joi 115ms (from cache)
+47 http fetch GET 304 https://registry.npmjs.org/@hapi%2fwreck 155ms (from cache)
+48 timing idealTree:#root Completed in 899ms
+49 timing idealTree:node_modules/0 Completed in 0ms
+50 timing idealTree:node_modules/1 Completed in 1ms
+51 timing idealTree:node_modules/2 Completed in 0ms
+52 timing idealTree:node_modules/3 Completed in 0ms
+53 silly placeDep ROOT @hapi/hoek@9.1.0 OK for: simple-oauth2@4.2.0 want: ^9.0.4
+54 silly placeDep ROOT @hapi/wreck@17.1.0 OK for: simple-oauth2@4.2.0 want: ^17.0.0
+55 silly placeDep node_modules/simple-oauth2 debug@4.3.1 OK for: simple-oauth2@4.2.0 want: ^4.1.1
+56 silly placeDep ROOT joi@17.3.0 OK for: simple-oauth2@4.2.0 want: ^17.3.0
+57 silly fetch manifest @hapi/bourne@2.x.x
+58 silly fetch manifest @hapi/boom@9.x.x
+59 silly fetch manifest ms@2.1.2
+60 silly fetch manifest @hapi/topo@^5.0.0
+61 silly fetch manifest @sideway/address@^4.1.0
+62 silly fetch manifest @sideway/formula@^3.0.0
+63 silly fetch manifest @sideway/pinpoint@^2.0.0
+64 http fetch GET 304 https://registry.npmjs.org/@hapi%2fboom 163ms (from cache)
+65 http fetch GET 304 https://registry.npmjs.org/@hapi%2fbourne 166ms (from cache)
+66 http fetch GET 304 https://registry.npmjs.org/@sideway%2fformula 157ms (from cache)
+67 http fetch GET 304 https://registry.npmjs.org/ms 216ms (from cache)
+68 http fetch GET 304 https://registry.npmjs.org/@sideway%2faddress 213ms (from cache)
+69 http fetch GET 304 https://registry.npmjs.org/@hapi%2ftopo 215ms (from cache)
+70 http fetch GET 304 https://registry.npmjs.org/@sideway%2fpinpoint 210ms (from cache)
+71 timing idealTree:node_modules/simple-oauth2 Completed in 232ms
+72 timing idealTree:node_modules/@hapi/hoek Completed in 0ms
+73 silly placeDep ROOT @hapi/boom@9.1.0 OK for: @hapi/wreck@17.1.0 want: 9.x.x
+74 silly placeDep ROOT @hapi/bourne@2.0.0 OK for: @hapi/wreck@17.1.0 want: 2.x.x
+75 timing idealTree:node_modules/@hapi/wreck Completed in 4ms
+76 timing idealTree:node_modules/@hapi/boom Completed in 0ms
+77 timing idealTree:node_modules/@hapi/bourne Completed in 0ms
+78 silly placeDep ROOT @hapi/topo@5.0.0 OK for: joi@17.3.0 want: ^5.0.0
+79 silly placeDep ROOT @sideway/address@4.1.0 OK for: joi@17.3.0 want: ^4.1.0
+80 silly placeDep ROOT @sideway/formula@3.0.0 OK for: joi@17.3.0 want: ^3.0.0
+81 silly placeDep ROOT @sideway/pinpoint@2.0.0 OK for: joi@17.3.0 want: ^2.0.0
+82 timing idealTree:node_modules/joi Completed in 6ms
+83 timing idealTree:node_modules/@hapi/topo Completed in 0ms
+84 timing idealTree:node_modules/@sideway/address Completed in 0ms
+85 timing idealTree:node_modules/@sideway/formula Completed in 0ms
+86 timing idealTree:node_modules/@sideway/pinpoint Completed in 0ms
+87 silly placeDep node_modules/simple-oauth2 ms@2.1.2 OK for: debug@4.3.1 want: 2.1.2
+88 timing idealTree:node_modules/simple-oauth2/node_modules/debug Completed in 1ms
+89 timing idealTree:node_modules/simple-oauth2/node_modules/ms Completed in 0ms
+90 timing idealTree:buildDeps Completed in 1147ms
+91 timing idealTree:fixDepFlags Completed in 4ms
+92 timing idealTree Completed in 1298ms
+93 timing command:install Completed in 1301ms
+94 verbose type tag
+95 verbose stack 0: No matching version found for 0@express.
+95 verbose stack     at module.exports (/usr/local/lib/node_modules/npm/node_modules/npm-pick-manifest/index.js:207:23)
+95 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/pacote/lib/registry.js:96:26
+95 verbose stack     at async Arborist.[buildDepStep] (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:781:11)
+95 verbose stack     at async Arborist.buildIdealTree (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:209:7)
+95 verbose stack     at async Promise.all (index 1)
+95 verbose stack     at async Arborist.reify (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:122:5)
+95 verbose stack     at async install (/usr/local/lib/node_modules/npm/lib/install.js:39:3)
+96 verbose cwd /site
+97 verbose Linux 5.4.0-48-generic
+98 verbose argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "--save" "simple-oauth2"
+99 verbose node v15.3.0
+100 verbose npm  v7.0.14
+101 error code ETARGET
+102 error notarget No matching version found for 0@express.
+103 error notarget In most cases you or one of your dependencies are requesting
+103 error notarget a package version that doesn't exist.
+104 verbose exit 1

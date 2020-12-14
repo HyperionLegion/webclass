@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+<h1>NFL Teams Quiz </h1>
+<h1>Hello {{user}}!</h1>
+<button class="btn btn-primary" href={{link}}{{message}}></button>
+<h2>Your Visits: {{visitor}}</h2>
+<input placeholder="Enter team name" name="team"/>
+<h2 id="score">Score: 0</h2>
+<h2 id="time">Time: 60</h2>
+<div>
+<table id ="AFC North">
+	<tr>
+		<th>AFC North</th>
+	</tr>
+	<tr>
+		<td id = "AN1"></td>
+	</tr>
+	<tr>
+		<td id="AN2"></td>
+	</tr>
+	<tr>
+		<td id="AN3"></td>
+	</tr>
+	<tr>
+		<td id="AN4"></td>
+	</tr>
+	
+</table>
+<table id ="AFC East">
+	<tr>
+		<th>AFC East</th>
+	</tr>
+	<tr>
+		<td id="AE1"></td>
+	</tr>
+	<tr>
+		<td id="AE2"></td>
+	</tr>
+	<tr>
+		<td id="AE3"></td>
+	</tr>
+	<tr>
+		<td id="AE4"></td>
+	</tr>
+	
+</table>
+<table id ="AFC West">
+	<tr>
+		<th>AFC West</th>
+	</tr>
+	<tr>
+		<td id="AW1"></td>
+	</tr>
+	<tr>
+		<td id="AW2"></td>
+	</tr>
+	<tr>
+		<td id="AW3"></td>
+	</tr>
+	<tr>
+		<td id="AW4"></td>
+	</tr>
+	
+</table>
+<table id ="AFC South">
+	<tr>
+		<th>AFC South</th>
+	</tr>
+	<tr>
+		<td id="AS1"></td>
+	</tr>
+	<tr>
+		<td id="AS2"></td>
+	</tr>
+	<tr>
+		<td id="AS3"></td>
+	</tr>
+	<tr>
+		<td id="AS4"></td>
+	</tr>
+	
+</table>
+<table id ="NFC North">
+	<tr>
+		<th>NFC North</th>
+	</tr>
+	<tr>
+		<td id="NN1"></td>
+	</tr>
+	<tr>
+		<td id="NN2"></td>
+	</tr>
+	<tr>
+		<td id="NN3"></td>
+	</tr>
+	<tr>
+		<td id="NN4"></td>
+	</tr>
+	
+</table>
+<table id ="NFC East">
+	<tr>
+		<th>NFC East</th>
+	</tr>
+	<tr>
+		<td id="NE1"></td>
+	</tr>
+	<tr>
+		<td id="NE2"></td>
+	</tr>
+	<tr>
+		<td id="NE3"></td>
+	</tr>
+	<tr>
+		<td id="NE4"></td>
+	</tr>
+	
+</table>
+<table id ="NFC West">
+	<tr>
+		<th>NFC West</th>
+	</tr>
+	<tr>
+		<td id="NW1"></td>
+	</tr>
+	<tr>
+		<td id="NW2"></td>
+	</tr>
+	<tr>
+		<td id="NW3"></td>
+	</tr>
+	<tr>
+		<td id="NW4"></td>
+	</tr>
+	
+</table>
+<table id ="NFC South">
+	<tr>
+		<th>NFC South</th>
+	</tr>
+	<tr>
+		<td id="NS1"></td>
+	</tr>
+	<tr>
+		<td id = "NS2"></td>
+	</tr>
+	<tr>
+		<td id="NS3"></td>
+	</tr>
+	<tr>
+		<td id="NS4"></td>
+	</tr>
+	
+</table>
+</div>
+<button id="reset" class="btn btn-primary">Reset</button>
+<button id="start" class="btn btn-success">Start</button>
+</div>
+</body>
+
+</html>
+<style>
+	div>table{
+		display:inline-block;
+		width:24%;
+	}
+	table, th, td {
+  border: 1px solid black;
+    border-collapse: collapse;
+
+}
+td{
+	height:25px;
+	width:15%;
+	white-space:nowrap;
+}
+</style>
+<script src="/js/quiz.js"></script>
