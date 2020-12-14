@@ -1,3 +1,6 @@
+const {  AuthorizationCode } = require('simple-oauth2');
+var  https = require('https');
+
 module.exports.run_setup = function(app) {
     var ion_client_id = 'kxPonp6rlh0QnVlUipJCKl5cX6znzYp9QY8psQ1L';
 var ion_client_secret = 'IENWkTCJ0yDerLdmUFm17ughAUL8EogrTLo1k5PPID2ptLij4dgf2bCDN4bnIDF4xrJQsb7nSILyEJkmEOovziwrFQGgLmJUMh8jCY9i3Fm9k6WLNUYKXCwHj4C6IKG8';
@@ -28,7 +31,7 @@ function checkAuthentication(req,res,next) {
     }
     else {
         // the user has not logged in
-        res.render('quiz', {'link' : authorizationUri, 'message':'Login'})
+        res.render('quiz', {'user': 'Unkown', 'link' : authorizationUri, 'message':'Login'})
     }
 }
 function getUserName(req,res,next) {

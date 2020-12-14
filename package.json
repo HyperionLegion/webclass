@@ -1,19 +1,10 @@
 {
- "description": "This is my lab server",
- "homepage": "https://jh.sites.tjhsst.edu/",
- "keywords": [
-  "node",
-  "server",
-  "client",
-  "browser"
- ],
- "author": "Joshua Hsueh",
- "contributors": [],
- "dependencies": [
-  "express",
-  "hbs",
-  "https",
-  "path"
- ],
- "version": "0.0.1"
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "hbs": "^4.1.1",
+    "https": "^1.0.0",
+    "path": "^0.12.7",
+    "simple-oauth2": "^4.2.0"
+  }
 }
