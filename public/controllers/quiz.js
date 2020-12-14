@@ -88,7 +88,6 @@ app.get('/login', [convertCodeToToken], function(req, res) {
 app.get('/logout', function (req, res) {
     
     delete req.session.authenticated;
-    console.log(res.locals.token);
     res.redirect('https://jh.sites.tjhsst.edu/quiz');
 
 });
