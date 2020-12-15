@@ -72,7 +72,8 @@ async function convertCodeToToken(req, res, next) {
     } 
     catch (error) {
         console.log('Access Token Error', error.message);
-         res.send(502); // error creating token
+        // res.send(502); // error creating token
+        res.redirect('https://jh.sites.tjhsst.edu/quiz')
     }
 }
 
