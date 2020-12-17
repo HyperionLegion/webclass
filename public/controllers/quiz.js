@@ -31,7 +31,7 @@ function checkAuthentication(req,res,next) {
     }
     else {
         // the user has not logged in
-        res.render('quiz', {'user': 'Unkown', 'link' : authorizationUri, 'message':'Login'})
+        res.render('quiz', {'user': 'Unknown', 'link' : authorizationUri, 'message':'Login'})
     }
 }
 function getUserName(req,res,next) {
