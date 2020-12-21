@@ -1,4 +1,4 @@
 # webclass
-Just my code for my web class projects on Director
+My web class projects at TJHSST on Director
 
 https://jh.sites.tjhsst.edu/
