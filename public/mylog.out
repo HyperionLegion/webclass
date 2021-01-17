@@ -1,3 +1,19 @@
-Thu, 17 Dec 2020 21:09:15 GMT express-session deprecated undefined resave option; provide resave option at index.js:9:9
-Thu, 17 Dec 2020 21:09:15 GMT express-session deprecated undefined saveUninitialized option; provide saveUninitialized option at index.js:9:9
+Sun, 17 Jan 2021 20:45:14 GMT express-session deprecated undefined resave option; provide resave option at index.js:9:9
+Sun, 17 Jan 2021 20:45:14 GMT express-session deprecated undefined saveUninitialized option; provide saveUninitialized option at index.js:9:9
 Express server started on port: 80
+[]
+[ RowDataPacket { id: 36377, name: 'Joshua', visits: 1 } ]
+[ RowDataPacket { id: 36377, name: 'Joshua', visits: 2 } ]
+[ RowDataPacket { id: 36377, name: 'Joshua', visits: 3 } ]
+[ RowDataPacket { id: 36377, name: 'Joshua', visits: 4 } ]
+[ RowDataPacket { id: 36377, name: 'Joshua', visits: 5 } ]
+[ RowDataPacket { id: 36377, name: 'Joshua', visits: 6 } ]
+[ RowDataPacket { id: 36377, name: 'Joshua', visits: 7 } ]
+[ RowDataPacket { id: 36377, name: 'Joshua', visits: 8 } ]
+[ RowDataPacket { id: 36377, name: 'Joshua', visits: 9 } ]
+[ RowDataPacket { id: 36377, name: 'Joshua', visits: 10 } ]
+[ RowDataPacket { id: 36377, name: 'Joshua', visits: 11 } ]
+[ RowDataPacket { id: 36377, name: 'Joshua', visits: 12 } ]
+[ RowDataPacket { id: 36377, name: 'Joshua', visits: 13 } ]
+[ RowDataPacket { id: 36377, name: 'Joshua', visits: 14 } ]
+[ RowDataPacket { id: 36377, name: 'Joshua', visits: 15 } ]

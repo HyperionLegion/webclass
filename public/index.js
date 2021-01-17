@@ -13,7 +13,6 @@ app.use(session({
 var controllers = require('./controllers');
 app.set( 'port' , process.env.PORT || 8080 ) ;
 app.use(express.static(path.join(__dirname,'static')));
-
 app.set('view engine', 'hbs');
 hbs.registerPartials( path.join(__dirname,'views','partials') )
 controllers.do_setup(app);
