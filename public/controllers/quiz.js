@@ -16,8 +16,13 @@ var client = new AuthorizationCode({
     tokenPath: 'https://ion.tjhsst.edu/oauth/token/'
   }
 });
+
 // This is the link that will be used later on for logging in. This URL takes
 // you to the ION server and asks if you are willing to give read permission to ION.
+
+var mysql = require('mysql');
+var connection = mysql.createConnection(process.env.DIRECTOR_DATABASE_URL);
+connection.connect();
 
 var authorizationUri = client.authorizeURL({
     scope: "read",
@@ -92,24 +97,33 @@ app.get('/logout', function (req, res) {
     res.redirect('https://jh.sites.tjhsst.edu/quiz');
 
 });
-    app.get('/quiz', [checkAuthentication, getUserName], function(req, res){
+     app.get('/quiz', [checkAuthentication, getUserName], function(req, res){
         var profile = res.locals.profile;
         var first_name = profile.first_name;
-        
         var visit_count;
-    if (!('visit_count' in req.session)) {
-        visit_count = 0;
-    } else {
-        visit_count = req.session.visit_count
-    }
-    
+         connection.query('SELECT * FROM players WHERE id='+profile.id+';', function (error, results, fields) {
+   if (error) throw error;
+   console.log(results);
+   if(results.length>0){
 
-	if (Number.isNaN(visit_count)) {
-		visit_count = 1;
-	} else {
-		visit_count += 1;
-	}
-	req.session.visit_count = visit_count;
-   res.render('quiz', {'visitor':visit_count, 'user': first_name, 'link':'https://jh.sites.tjhsst.edu/logout', 'message':'Logout'});     
+       connection.query('UPDATE players SET visits = visits+1 WHERE id='+profile.id+';', function (error, results, fields) {
+   if (error) throw error;
+   visit_count=1;
+   connection.query('SELECT visits FROM players WHERE id='+profile.id+';', function (error, results, fields) {
+   if (error) throw error;
+   obj = JSON.parse(JSON.stringify(results[0]));
+   visit_count=obj.visits;
+   res.render('quiz', {'visitor':visit_count, 'user': first_name, 'link':'https://jh.sites.tjhsst.edu/logout', 'message':'Logout'});
+ });
+ });
+   }
+   else{
+       connection.query('INSERT INTO players(id, name, visits) VALUE ('+profile.id+',\''+profile.first_name+'\',1);', function (error, results, fields) {
+  if (error) throw error;
+  visit_count=1;
+   res.render('quiz', {'visitor':visit_count, 'user': first_name, 'link':'https://jh.sites.tjhsst.edu/logout', 'message':'Logout'}); 
+}); 
+   }
+ });
 });
 }
